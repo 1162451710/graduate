@@ -1,0 +1,12 @@
+<!-- div  容器，分割===wx中的view组件 -->
+<!-- <text>text包围的才可以长按选中</text> -->
+<view class='container'>
+
+  <image class='user-avatar' src='/images/证件照.png'></image>
+  <!-- img ==========wx中的src -->
+  <text class='user-name'>hello,zl</text>
+  <view class='moto-container'>
+    <text class='user-name'>开启微信小程序
+  </text>
+  </view>
+</view>

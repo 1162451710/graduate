@@ -1,0 +1,52 @@
+<!-- <import src="post-item/post-item-template.wxml"> -->
+
+<view>
+  <swiper class='swiper' indicator-dots="ture" autoplay='{{false}}' interval='3000'>
+    /*bollean类型 false必须加双括号，不然转化类型之后还有值，不为空*/
+    <swiper-item>
+      <image src='/images/1.jpg'>
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/2.jpg'>
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/证件照.png'>
+      </image>
+    </swiper-item>
+  </swiper>
+
+//template模板化技术
+
+
+
+
+  <block wx:for="{{post_key}}" wx:key="{{item.title}}" wx:for-idx="idx">
+    <view class='post_container'>
+      <view>
+        <image class='post_author' src="{{item.author_img}}">
+        </image>
+        <text wx:if="{{item.imagecondition}}" class='post_author_date'>{{item.date }} {{ idx}}</text>
+      </view>
+
+      <text class='post_title'>{{item.title}}</text>
+      <image class='post_image' src='{{item.post_img}}'>
+      </image>
+      <text class='post_content'>{{item.content}}</text>
+
+      <view class='post_container1'>
+        <image class='post_like_image' src='{{item.author_img}}'>
+        </image>
+        <text class='post_like-font'>{{item.reading}}</text>
+        <image class='post_like_image' src='{{item.author_img}}'>
+        </image>
+        <text class='post_like-font'>{{item.collection}}</text>
+      </view>
+    </view>
+  </block>
+
+
+
+
+</view>
